@@ -45,3 +45,47 @@
     </table>   
 </body>
 </html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lentelė su colspan ir rowspan</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 60%;
+            margin: auto;
+        }
+        th, td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <tr>
+            <th rowspan="2">Pavadinimas 1</th>
+            <th colspan="2">Pavadinimas 2</th>
+            <th rowspan="2">Pavadinimas 3</th>
+        </tr>
+        <tr>
+            <th>Stulpelis 1</th>
+            <th>Stulpelis 2</th>
+        </tr>
+        <tr>
+            <td>Eilutė 1, langelis 1</td>
+            <td>Eilutė 1, langelis 2</td>
+            <td>Eilutė 1, langelis 3</td>
+            <td>Eilutė 1, langelis 4</td>
+        </tr>
+        <tr>
+            <td>Eilutė 2, langelis 1</td>
+            <td>Eilutė 2, langelis 2</td>
+            <td>Eilutė 2, langelis 3</td>
+            <td>Eilutė 2, langelis 4</td>
+        </tr>
+    </table>
+</body>
+</html>
