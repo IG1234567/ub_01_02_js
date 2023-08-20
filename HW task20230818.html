@@ -5,9 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Simple HTML Table</title>
     <style>
+        .table-container {
+            display: flex;
+            flex-direction: column;
+        }
         table {
             border-collapse: collapse;
             width: 100%;
+            margin-bottom: 20px; /* Tarpas tarp lentelių */
         }
         th, td {
             border: 1px solid black;
@@ -16,11 +21,6 @@
         }
         th {
             background-color: #f2f2f2;
-        }
-        .table-container {
-            display: flex;
-            flex-direction: column;
-            gap: 20px;
         }
         .clear {
             clear: both;
