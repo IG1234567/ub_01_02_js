@@ -7,9 +7,7 @@
     <style>
         table {
             border-collapse: collapse;
-            width: 45%;
-            float: left;
-            margin-right: 20px; /* Pridedame tarpą tarp lentelių */
+            width: 100%;
         }
         th, td {
             border: 1px solid black;
@@ -20,10 +18,20 @@
             background-color: #f2f2f2;
         }
         .table-container {
+            display: inline-block;
+            width: 45%;
+            vertical-align: top;
+            margin-right: 10px; /* Pridedame tarpą tarp lentelių */
             margin-bottom: 20px;
         }
         .clear {
             clear: both;
+        }
+        @media (max-width: 600px) {
+            .table-container {
+                width: 100%;
+                margin-right: 0;
+            }
         }
     </style>  
 </head>
