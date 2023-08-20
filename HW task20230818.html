@@ -89,6 +89,42 @@
             </tr>
         </table>
     </div>
+    
+    <h3>Nested Tables:</h3>
+    <div class="table-container">
+        <table>
+            <tr>
+                <th>Main Table Header 1</th>
+                <th>Main Table Header 2</th>
+                <th>Main Table Header 3</th>
+            </tr>
+            <tr>
+                <td rowspan="2">
+                    <!-- Nested Table within a Cell -->
+                    <table>
+                        <tr>
+                            <th>Nested Table Header 1</th>
+                            <th>Nested Table Header 2</th>
+                        </tr>
+                        <tr>
+                            <td>Data 1,1</td>
+                            <td>Data 1,2</td>
+                        </tr>
+                        <tr>
+                            <td>Data 2,1</td>
+                            <td>Data 2,2</td>
+                        </tr>
+                    </table>
+                </td>
+                <td>Data 1,2</td>
+                <td>Data 1,3</td>
+            </tr>
+            <tr>
+                <td>Data 2,2</td>
+                <td>Data 2,3</td>
+            </tr>
+        </table>
+    </div>
     <div class="clear"></div>   
 </body>
 </html>
