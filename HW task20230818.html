@@ -7,8 +7,8 @@
     <style>
         table {
             border-collapse: collapse;
-            width: 100%;
-            margin: auto;
+            width: 45%;
+            float: left;
         }
         th, td {
             border: 1px solid black;
@@ -19,9 +19,10 @@
             background-color: #f2f2f2;
         }
         .table-container {
-            display: flex;
-            justify-content: space-between;
-            margin-bottom: 20px;
+            margin-right: 10px;
+        }
+        .clear {
+            clear: both;
         }
     </style>  
 </head>
@@ -50,7 +51,8 @@
                 <td>Data 3,3</td>
             </tr>
         </table>
-
+    </div>
+    <div class="table-container">
         <table>
             <tr>
                 <th rowspan="2">Pavadinimas 1</th>
@@ -74,6 +76,7 @@
                 <td>Eilutė 2, langelis 4</td>
             </tr>
         </table>
-    </div>   
+    </div>
+    <div class="clear"></div>   
 </body>
 </html>
