@@ -226,12 +226,60 @@
     </div>
 
     <h3>Survey Form:</h3>
+    <div class="container">
+        <form>
+            <label for="name">Name:</label> //Text input for name
+            <input type="text" id="name" name="name" required>
+
+            <label>Gender:</label> //Radio buttons for gender selection
+            <input type="radio" id="male" name="gender" value="male" required>
+            <label for="male">Male</label>
+            <input type="radio" id="female" name="gender" value="female">
+            <label for="female">Female</label>
+
+            <label>Interests:</label> //Checkboxes for interests selection
+            <input type="checkbox" id="sports" name="interests[]" value="sports">
+            <label for="sports">Sports</label>
+            <input type="checkbox" id="music" name="interests[]" value="music">
+            <label for="music">Music</label>
+            <input type="checkbox" id="movies" name="interests[]" value="movies">
+            <label for="movies">Movies</label>
+
+            <label for="comments">Comments:</label> //Text area for comments
+            <textarea id="comments" name="comments" rows="4"></textarea>
+
+            <button type="submit">Submit</button>
+        </form>
+    </div>
 
     <h3>Contact Us Form:</h3>
+    <div class="container">
+        <form>
+            <label for="name">Name:</label> //Text input for name
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label> //Email input for email address
+            <input type="email" id="email" name="email" required>
+
+            <label for="subject">Subject:</label> //Text input for subject
+            <input type="text" id="subject" name="subject" required>
+
+            <label for="message">Message:</label> //Textarea for message
+            <textarea id="message" name="message" rows="6" required></textarea>
+
+            <button type="submit">Submit</button>
+        </form>
+    </div>
 
     <h3>File Upload Form:</h3>
-
-
+    <div class="container">
+        <form enctype="multipart/form-data"> // form's enctype attribute is set to "multipart/form-data" to handle file uploads.
+            <label for="file">Select a File:</label>
+            <input type="file" id="file" name="file" accept=".jpg, .jpeg, .png, .pdf" required> //form includes an <input type="file"> element for selecting a file to upload
+            //accept attribute specifies the allowed file types that users can upload
+            <button type="submit">Upload</button>
+        </form>
+    </div>
     <div class="clear"></div>   
 </body>
 </html>
