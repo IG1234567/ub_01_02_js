@@ -1,0 +1,30 @@
+/* Basic styling for the whole page */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+  }
+  
+  /* Styling for the container */
+  .container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 800px;
+    border: 1px solid #333;
+    padding: 20px;
+  }
+  
+  /* Styling for the columns */
+  .column {
+    flex: 1;
+    background-color: #f0f0f0;
+    text-align: center;
+    padding: 20px;
+    margin: 0 10px;
+  }
+  
