@@ -1,3 +1,7 @@
+.navbar-custom {
+    background-color: #3498db; /* Change this color to your desired background color */
+  } 
+
 /* Apply custom styles to form elements */
 form label {
     font-weight: bold;
