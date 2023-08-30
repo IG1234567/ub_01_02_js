@@ -1,3 +1,7 @@
+.navbar-custom {
+    background-color: #3498db; /* Change this color to your desired background color */
+  } 
+
 /* Apply custom styles to form elements */
 form label {
     font-weight: bold;
@@ -31,4 +35,9 @@ form button[type="submit"] {
     form textarea {
         width: 100%;
     }
+}
+
+.jumbotron-custom {
+    background-color: #f8f9fa; /* Custom background color */
+    color: #333; /* Custom text color */
 }
