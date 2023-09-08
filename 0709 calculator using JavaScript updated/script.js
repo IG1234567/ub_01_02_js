@@ -1,4 +1,4 @@
-// Step 1: Ask user to enter two numbers using prompt
+// Ask user to enter two numbers using prompt
 let value1 = parseFloat(prompt("Enter the first number:"));
 let value2 = parseFloat(prompt("Enter the second number:"));
 
