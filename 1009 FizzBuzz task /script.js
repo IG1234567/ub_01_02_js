@@ -1,4 +1,4 @@
-// Ask the user to enter a number
+// Ask the user to enter a  number
 const limit = parseInt(prompt("Enter a number:"));
 
 // Check if the input is a valid number
