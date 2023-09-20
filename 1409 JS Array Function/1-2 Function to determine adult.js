@@ -6,4 +6,5 @@ function ageStatus(age) {
     }
 }
 
-// Test the function console.log(ageStatus(20)); // Example
+// Test the function 
+console.log(ageStatus(20)); // Example
