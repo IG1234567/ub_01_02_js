@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Matrix Sum Calculator</title>
+</head>
+<body>
+    <h1>Matrix Sum Calculator</h1>
+    <script>
+        // Function to prompt the user for matrix input
+        function getMatrixInput(matrixNumber) {
+            const rows = parseInt(prompt(`Enter the number of rows for Matrix ${matrixNumber}:`));
+            const cols = parseInt(prompt(`Enter the number of columns for Matrix ${matrixNumber}:`));
+            const matrix = [];
+
+            console.log(`Enter elements for Matrix ${matrixNumber}:`);
+            for (let i = 0; i < rows; i++) {
+                matrix.push([]);
+                for (let j = 0; j < cols; j++) {
+                    const element = parseFloat(prompt(`Enter element at row ${i + 1}, column ${j + 1}:`));
+                    matrix[i].push(element);
+                }
+            }
+
+            return matrix;
+        }
+
+        // Function to add two matrices
+        function addMatrices(matrix1, matrix2) {
+            const result = [];
+
+            for (let i = 0; i < matrix1.length; i++) {
+                result.push([]);
+                for (let j = 0; j < matrix1[i].length; j++) {
+                    result[i][j] = matrix1[i][j] + matrix2[i][j];
+                }
+            }
+
+            return result;
+        }
+
+        // Get input for the two matrices
+        const matrixA = getMatrixInput(1);
+        const matrixB = getMatrixInput(2);
+
+        // Check if matrices can be added (same dimensions)
+        if (matrixA.length === matrixB.length && matrixA[0].length === matrixB[0].length) {
+            const resultMatrix = addMatrices(matrixA, matrixB);
+            console.log("Matrix A:");
+            console.log(matrixA);
+            console.log("Matrix B:");
+            console.log(matrixB);
+            console.log("Sum of the matrices:");
+            console.log(resultMatrix);
+        } else {
+            console.log("Matrices cannot be added. They must have the same dimensions.");
+        }
+    </script>
+</body>
+</html>
