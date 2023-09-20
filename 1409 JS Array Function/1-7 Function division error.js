@@ -5,5 +5,6 @@ function divideNumbers(a, b) {
     return a / b;
 }
 
-console.log(divideNumbers(10, 2)); // Example usage
-console.log(divideNumbers(5, 0)); // Example usage (error case)
+// Test the function:
+// console.log(divideNumbers(10, 2)); // Example 
+// console.log(divideNumbers(5, 0)); // Example (error)

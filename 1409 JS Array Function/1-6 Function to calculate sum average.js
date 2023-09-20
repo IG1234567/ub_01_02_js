@@ -10,6 +10,7 @@ function calculateSumAndAverage(numbers) {
     return { sum, average };
 }
 
-const numbers = [1, 2, 3, 4, 5];
-const result = calculateSumAndAverage(numbers);
-console.log(`Sum: ${result.sum}, Average: ${result.average}`); // Example usage
+// Test the function:
+// const numbers = [1, 2, 3, 4, 5];
+// const result = calculateSumAndAverage(numbers);
+// console.log(`Sum: ${result.sum}, Average: ${result.average}`); // Example

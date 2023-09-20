@@ -4,5 +4,6 @@ function createAdder(number1) {
     };
 }
 
-const addFive = createAdder(5);
-console.log(addFive(3)); // Example usage
+// Test the function:
+// const addFive = createAdder(5);
+// console.log(addFive(3)); // Example 
