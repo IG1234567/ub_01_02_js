@@ -27,8 +27,10 @@ function addMatrices(matrix1, matrix2) {
 }
 
 // Test the function:
-// let matrixA = promptMatrix();
-// let matrixB = promptMatrix();
-// let sumMatrix = addMatrices(matrixA, matrixB);
-// console.log("Sum of the matrices:");
-// console.log(sumMatrix);
+let matrixA = promptMatrix();
+let matrixB = promptMatrix();
+
+let sumMatrix = addMatrices(matrixA, matrixB);
+
+console.log("Sum of the matrices:");
+console.log(sumMatrix);
