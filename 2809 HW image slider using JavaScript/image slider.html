@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        /* some basic styles to the slider container */
+        .slider-container {
+            width: 400px;
+            overflow: hidden;
+            margin: 0 auto;
+        }
+
+        /* Style the slider images */
+        .slider-image {
+            width: 100%;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="slider-container">
+        <img class="slider-image" src="image1.jpg" alt="Image 1">
+        <img class="slider-image" src="image2.jpg" alt="Image 2">
+        <img class="slider-image" src="image3.jpg" alt="Image 3">
+    </div>
+
+    <script>
+        // JavaScript/jQuery code for the image slider
+        (function() {
+            // Initialize variables
+            var currentIndex = 0;
+            var images = document.querySelectorAll('.slider-image');
+
+            // Function to show the next image
+            function showNextImage() {
+                images[currentIndex].style.display = 'none';
+                currentIndex = (currentIndex + 1) % images.length;
+                images[currentIndex].style.display = 'block';
+            }
+
+            // Set an interval to automatically change the image every 3 seconds (3000 milliseconds)
+            setInterval(showNextImage, 3000);
+        })();
+    </script>
+</body>
+</html>
