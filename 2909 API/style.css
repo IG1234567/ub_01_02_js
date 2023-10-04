@@ -1,69 +1,69 @@
+/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Set a background color and font family */
 body {
-    background-color: #2ecc71;
-    font-family: source-sans-pro, sans-serif;
+    background-color: #f5f5f5;
+    font-family: Arial, sans-serif;
 }
 
-h1 {
-    margin-left: auto;
-    margin-top: 50px;
-    text-align: center;
-    font-weight: 100;
-    font-size: 2.8em;
-    color: #ffffff;
-}
-
+/* Center the form */
 .container {
-    width: 500px;
-    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
 }
 
-.formStyle {
-    background-color: #2ecc71;
+/* Style the form container */
+.form-container {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     padding: 20px;
-    width: 400px;
-    margin-bottom: 20px;
-    border-bottom-width: 1px;
-    border-bottom-style: solid;
-    border-bottom-color: #ecf0f1;
-    border-top-style: none;
-    border-right-style: none;
-    border-left-style: none;
-    font-size: 1em;
-    font-weight: 100;
-    color: #ffffff;
-}
-
-.translate {
-    margin-left: auto;
-    margin-top: 50px;
     text-align: center;
-    font-weight: 100;
-    font-size: 2.8em;
-    width: 50%;
+    max-width: 400px;
 }
 
-.translate-option {
-    width: 50%;
+/* Style the form heading */
+h1 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
 }
 
-/* To remove the outline that appears on clicking the input textbox */
-input:focus {
-    outline: none;
+/* Style the input field */
+.input-field {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
 }
 
-/* To format the placeholder text color */
-::-webkit-input-placeholder {
-    color: #ecf0f1;
+/* Style the translate button */
+#translateButton {
+    background-color: #2ecc71;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
 }
 
-:-moz-placeholder {
-    color: #ecf0f1;
-}
-
-::-moz-placeholder {
-    color: #ecf0f1;
-}
-
-:-ms-input-placeholder {
-    color: #ecf0f1;
+/* Style the translation output textarea */
+#translationOutput {
+    width: 100%;
+    padding: 10px;
+    margin-top: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    resize: vertical;
 }
