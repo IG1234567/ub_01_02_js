@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Web Form With Language Translation</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm"></div>
+            <div class="col-sm">
+                <div class="btn-group dropright translate">
+                    <button id="langSel" type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Translate to
+                    </button>
+                    <div class="dropdown-menu translate-option">
+                        <a class="dropdown-item" href="#" tolang="en">English (default)</a>
+                        <a class="dropdown-item" href="#" tolang="it">Italian</a>
+                        <a class="dropdown-item" href="#" tolang="es">Spanish</a>
+                        <a class="dropdown-item" href="#" tolang="de">German</a>
+                    </div>
+                </div>
+                <h1 id="formHeading">Contact Form</h1>
+                <div>
+                    <form>
+                        <input type="text" id="textInput" class="formStyle" placeholder="Text to Translate" required />
+                        <button type="button" id="translateButton" class="formButton">Translate</button>
+                        <textarea id="translationOutput" class="formStyle" rows="4" placeholder="Translated Text" readonly></textarea>
+                    </form>
+                </div>
+            </div>
+            <div class="col-sm"></div>
+        </div>
+    </div>
+    
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+</body>
+</html>
