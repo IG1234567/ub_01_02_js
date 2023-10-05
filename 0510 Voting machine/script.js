@@ -58,12 +58,12 @@ document.addEventListener("DOMContentLoaded", function () {
                 });
     });
 
-// Fetch the vote summary data from the server
-fetch("/vote-summary")
-    .then((response) => response.json())
-    .then((data) => {
-        // Populate the HTML page with the vote summary data
-        const summaryDiv = document.getElementById("summary");
+    // Fetch the vote summary data from the server
+    fetch("/vote-summary")
+        .then((response) => response.json())
+        .then((data) => {
+            // Populate the HTML page with the vote summary data
+            const summaryDiv = document.getElementById("summary");
 
         // Display the data in the "summary" div or format it as needed
         summaryDiv.innerHTML = `
@@ -72,7 +72,7 @@ fetch("/vote-summary")
             <p>Candidate 3 Votes: ${data.candidate2Count} (${data.candidate3Percentage}%)</p>
         `;
     })
-    .catch((error) => {
-        console.error("Failed to fetch vote summary:", error);
-    });
+.catch((error) => {
+    console.error("Failed to fetch vote summary:", error);
+});
 
