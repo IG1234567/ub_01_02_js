@@ -77,4 +77,3 @@ document.addEventListener("DOMContentLoaded", function () {
     console.error("Failed to fetch vote summary:", error);
 });
 }
-}
