@@ -4,6 +4,9 @@ const fs = require("fs");
 
 app.use(express.json());
 
+// Serve static files
+app.use(express.static(__dirname));
+
 // Maršrutas, kuris atsako į GET užklausą į šakninį URL
 app.get("/", (req, res) => {
     res.send("Sveiki atvykę į mano serverį!");
@@ -58,12 +61,8 @@ for (const candidateId in candidateVotesCount) {
 
 app.get("/vote-summary", (req, res) => {
     // Render the vote summary page with the calculated results
-    res.render("vote-summary", {
-        candidateVotesCount,
-        candidateVotesPercentage,
-    });
+    res.sendFile(__dirname + "/vote-summary.html");
 });
-
 
 const PORT = process.env.PORT || 3000;
 

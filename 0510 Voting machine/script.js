@@ -69,7 +69,7 @@ fetch("/vote-summary")
         summaryDiv.innerHTML = `
             <p>Candidate 1 Votes: ${data.candidate1Count} (${data.candidate1Percentage}%)</p>
             <p>Candidate 2 Votes: ${data.candidate2Count} (${data.candidate2Percentage}%)</p>
-            <!-- Add more candidate data as needed -->
+            <p>Candidate 3 Votes: ${data.candidate2Count} (${data.candidate3Percentage}%)</p>
         `;
     })
     .catch((error) => {
