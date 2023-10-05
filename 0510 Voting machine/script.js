@@ -3,6 +3,7 @@ export function myFunction() {
     
     // Import the function from the module
 import { myFunction } from './myModule.js';
+}
 
 // Use the imported function
 myFunction();
