@@ -24,6 +24,7 @@ document.addEventListener("DOMContentLoaded", function () {
             const firstName = document.getElementById("firstName").value;
             const lastName = document.getElementById("lastName").value;
             const age = document.getElementById("age").value;
+            
             const selectedCandidateId = candidatesSelect.value;
         
             // veiksmai su informacija
@@ -69,7 +70,7 @@ document.addEventListener("DOMContentLoaded", function () {
         summaryDiv.innerHTML = `
             <p>Candidate 1 Votes: ${data.candidate1Count} (${data.candidate1Percentage}%)</p>
             <p>Candidate 2 Votes: ${data.candidate2Count} (${data.candidate2Percentage}%)</p>
-            <p>Candidate 3 Votes: ${data.candidate2Count} (${data.candidate3Percentage}%)</p>
+            <p>Candidate 3 Votes: ${data.candidate3Count} (${data.candidate3Percentage}%)</p>
         `;
     })
 .catch((error) => {
