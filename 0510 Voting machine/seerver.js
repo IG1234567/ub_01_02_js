@@ -29,6 +29,42 @@ app.post("/register-vote", (req, res) => {
     });
 });
 
+// Assuming you have an array of votes
+const votes = [
+    { candidateId: 1 },
+    { candidateId: 2 },
+    { candidateId: 3 },
+];
+
+// Calculate the count of votes for each candidate
+const candidateVotesCount = {};
+votes.forEach((vote) => {
+    const { candidateId } = vote;
+    if (candidateVotesCount[candidateId]) {
+        candidateVotesCount[candidateId]++;
+    } else {
+        candidateVotesCount[candidateId] = 1;
+    }
+});
+
+// Calculate the percentage of votes for each candidate
+const totalVotes = votes.length;
+const candidateVotesPercentage = {};
+for (const candidateId in candidateVotesCount) {
+    const count = candidateVotesCount[candidateId];
+    const percentage = (count / totalVotes) * 100;
+    candidateVotesPercentage[candidateId] = percentage;
+}
+
+app.get("/vote-summary", (req, res) => {
+    // Render the vote summary page with the calculated results
+    res.render("vote-summary", {
+        candidateVotesCount,
+        candidateVotesPercentage,
+    });
+});
+
+
 const PORT = process.env.PORT || 3000;
 
 // Paleisti serverį

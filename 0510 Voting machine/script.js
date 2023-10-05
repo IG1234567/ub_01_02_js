@@ -1,4 +1,4 @@
-`document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", function () {
     const form = document.getElementById("candidateForm");
     const candidatesSelect = document.getElementById("candidates");
 
@@ -57,5 +57,22 @@
                     console.error("Nepavyko užregistruoti balsu:", error);
                 });
     });
- 
-`
+
+// Fetch the vote summary data from the server
+fetch("/vote-summary")
+    .then((response) => response.json())
+    .then((data) => {
+        // Populate the HTML page with the vote summary data
+        const summaryDiv = document.getElementById("summary");
+
+        // Display the data in the "summary" div or format it as needed
+        summaryDiv.innerHTML = `
+            <p>Candidate 1 Votes: ${data.candidate1Count} (${data.candidate1Percentage}%)</p>
+            <p>Candidate 2 Votes: ${data.candidate2Count} (${data.candidate2Percentage}%)</p>
+            <!-- Add more candidate data as needed -->
+        `;
+    })
+    .catch((error) => {
+        console.error("Failed to fetch vote summary:", error);
+    });
+
