@@ -1,20 +1,19 @@
 {
-    "candidates": [
+  "candidates": [
       {
-        "id": 1,
-        "name": "Candidate 1",
-        "party": "Partija Laisvė"
+          "id": 1,
+          "name": "Candidate 1",
+          "party": "Partija Laisvė"
       },
       {
-        "id": 2,
-        "name": "Candidate 2",
-        "party": "Partija Lygybė"
+          "id": 2,
+          "name": "Candidate 2",
+          "party": "Partija Lygybė"
       },
       {
-        "id": 3,
-        "name": "Candidate 3",
-        "party": "Partija Liaudies"
+          "id": 3,
+          "name": "Candidate 3",
+          "party": "Partija Liaudies"
       }
-    ]
-  }
-  
+  ]
+}
