@@ -1,14 +1,4 @@
-// ES module syntax
-export function myFunction() {
-    
-    // Import the function from the module
-import { myFunction } from './myModule.js';
-}
-
-// Use the imported function
-myFunction();
-
-    document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", function () {
     const form = document.getElementById("candidateForm");
     const candidatesSelect = document.getElementById("candidates");
 
@@ -30,19 +20,19 @@ myFunction();
 
     form.addEventListener("submit", function (e) {
         e.preventDefault();
-    
+
         const firstName = document.getElementById("firstName").value;
         const lastName = document.getElementById("lastName").value;
         const age = document.getElementById("age").value;
-        
+
         const selectedCandidateId = candidatesSelect.value;
-    
+
         // veiksmai su informacija
         console.log("First Name:", firstName);
         console.log("Last Name:", lastName);
         console.log("Age:", age);
         console.log("Selected Candidate ID:", selectedCandidateId);
-        
+
         // Sukuriam objektą su balsu
         const vote = {
             firstName,
@@ -50,7 +40,7 @@ myFunction();
             age,
             selectedCandidateId,
         };
-    
+
         // POST užklausą į serverį
         fetch("/register-vote", {
             method: "POST",
@@ -87,4 +77,3 @@ myFunction();
             console.error("Failed to fetch vote summary:", error);
         });
 });
-}
