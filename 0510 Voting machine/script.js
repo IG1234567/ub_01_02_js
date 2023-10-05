@@ -1,4 +1,7 @@
-document.addEventListener("DOMContentLoaded", function () {
+// ES module syntax
+export function myFunction() {
+    
+    document.addEventListener("DOMContentLoaded", function () {
     const form = document.getElementById("candidateForm");
     const candidatesSelect = document.getElementById("candidates");
 
@@ -77,3 +80,4 @@ document.addEventListener("DOMContentLoaded", function () {
             console.error("Failed to fetch vote summary:", error);
         });
 });
+}
