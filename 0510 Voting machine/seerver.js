@@ -59,6 +59,7 @@ for (const candidateId in candidateVotesCount) {
     candidateVotesPercentage[candidateId] = percentage;
 }
 
+// Serving the vote-summary.html file
 app.get("/vote-summary", (req, res) => {
     // Render the vote summary page with the calculated results
     res.sendFile(__dirname + "/vote-summary.html");
