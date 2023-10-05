@@ -1,6 +1,12 @@
 // ES module syntax
 export function myFunction() {
     
+    // Import the function from the module
+import { myFunction } from './myModule.js';
+
+// Use the imported function
+myFunction();
+
     document.addEventListener("DOMContentLoaded", function () {
     const form = document.getElementById("candidateForm");
     const candidatesSelect = document.getElementById("candidates");
