@@ -37,7 +37,9 @@ body {
   
   .buttons {}
   
-  .operators {}
+  .operators {
+    display: flex;
+  }
   
   .operators div {
     display: inline-block;
