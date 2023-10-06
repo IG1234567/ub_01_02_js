@@ -67,12 +67,12 @@ body {
 
 /* Stilizacija kairėje panele su skaičiais */
 .leftPanel {
-  display: flex;
-  flex-direction: column;
+  display: inline-block;
+  direction: column;
 }
 
 .numbers {
-  display: flex;
+  display: inline-block;
   justify-content: space-between;
   margin-bottom: 10px;
 }
