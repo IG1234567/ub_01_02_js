@@ -66,11 +66,12 @@ body {
   }
   
   .leftPanel {
-    display: inline-block;
+    display: flex;
+    flex-direction: column;
   }
   
   .numbers div {
-    display: inline-block;
+    display: flex;
     border: 1px solid #ddd;
     border-radius: 1px;
     width: 80px;
@@ -93,6 +94,16 @@ body {
     font-weight: bold;
   }
   
+  .rightPanel {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f0f0f0;
+    padding: 10px;
+    border: 1px solid #ccc;
+}
+
   div.equal {
     display: inline-block;
     border: 1px solid #3079ED;
