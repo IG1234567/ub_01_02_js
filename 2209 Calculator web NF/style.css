@@ -40,7 +40,7 @@ body {
 .operators {}
 
 .operators div {
-  display: inline-block; flex-direction;
+  display: inline-block; flex-direction
   border: 1px solid #bbb;
   border-radius: 1px;
   width: 80px;
