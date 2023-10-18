@@ -5,6 +5,7 @@ const fs = require('fs');
 const app = express();
 const port = 3000;
 
+// Serve static files from the 'public' directory
 app.use(express.static('public'));
 app.use(bodyParser.json());
 
@@ -21,6 +22,7 @@ app.post('/tweets', (req, res) => {
   res.json({ message: 'Tweet added successfully' });
 });
 
-app.listen(port, () => {
-  console.log(`Server is running on port ${port}`);
+// Listen on a port
+app.listen(3000, () => {
+  console.log(`Server is running on port 3000`);
 });
