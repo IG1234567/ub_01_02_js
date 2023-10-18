@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
   // Function to load tweets from the server
   function loadTweets() {
-    fetch('/tweets') // Assuming your server serves the tweets at this endpoint
+    fetch('/tweets') // Assuming server serves the tweets at this endpoint
       .then(response => {
         if (response.status === 200) {
           return response.json();
