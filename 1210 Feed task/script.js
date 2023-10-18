@@ -26,13 +26,7 @@ document.addEventListener('DOMContentLoaded', function () {
       e.preventDefault();
       const username = usernameInput.value;
       const tweet = tweetInput.value;
-      fetch('/tweets', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({ username, tweet }),
-      })
+      fetch('https://vigilant-enigma-wrvx4w7vjjqh76v-8080.app.github.dev/tweets')
         .then(response => response.json())
         .then(data => {
           if (data.message === 'Tweet added successfully') {
