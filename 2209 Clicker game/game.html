@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clicker Game</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        #clicker-container {
+            margin: 100px auto;
+            width: 300px;
+        }
+        #countdown {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+        #click-count {
+            font-size: 36px;
+        }
+    </style>
+</head>
+<body>
+    <div id="clicker-container">
+        <div id="countdown">Time: 30</div>
+        <button id="start-button">Start</button>
+        <button id="click-button">Click</button>
+        <div id="click-count">Clicks: 0</div>
+    </div>
+
+    <script>
+        let countdownValue = 30;
+        let clickCount = 0;
+        let countdownInterval;
+
+        function startCountdown() {
+            countdownInterval = setInterval(function() {
+                countdownValue--;
+                document.getElementById('countdown').textContent = `Time: ${countdownValue}`;
+                if (countdownValue === 0) {
+                    clearInterval(countdownInterval);
+                    document.getElementById('click-button').disabled = true;
+                }
+            }, 1000);
+        }
+
+        document.getElementById('start-button').addEventListener('click', function() {
+            startCountdown();
+            document.getElementById('start-button').disabled = true;
+            document.getElementById('click-button').disabled = false;
+        });
+
+        document.getElementById('click-button').addEventListener('click', function() {
+            if (countdownValue > 0) {
+                clickCount++;
+                document.getElementById('click-count').textContent = `Clicks: ${clickCount}`;
+            }
+        });
+    </script>
+</body>
+</html>
