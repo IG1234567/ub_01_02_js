@@ -12,5 +12,4 @@ SELECT c.category_id, c.category_name, p.product_id, p.product_name, od.quantity
 FROM Categories c
 INNER JOIN Productcategories pc ON c.category_id = pc.category_id
 INNER JOIN Products p ON pc.product_id = p.product_id
-LEFT JOIN Orderdetails od ON pc.product_id = od.product_id;
-
+LEFT JOIN Orderdetails od ON pc.product_id = od.product_id
